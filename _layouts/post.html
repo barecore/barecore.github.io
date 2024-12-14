@@ -5,8 +5,8 @@ layout: default
 
 <section class="post">
   {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }} -  
-    {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %}' read</time>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }} - Leitura de 
+    {{ minute }} {%if minute <= 1 %} minuto {% else %} minutos {% endif %}</time>
   <h1 class="title">{{ page.title }}</h1>
   {{ content }}
 </section>
