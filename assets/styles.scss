@@ -1,0 +1,105 @@
+/* Importando a fonte JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+// Variáveis globais
+$font-family: 'JetBrains Mono', monospace;
+$background-color: #f4f4f4;
+$text-color: #000;
+$green: #008000;
+$dark-green: #006400;
+$border-color: #000;
+$button-padding: 5px 15px;
+
+// Estilos gerais
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.posts-section {
+  margin: 20px;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid $border-color;
+  padding-bottom: 5px;
+}
+
+// Tabelas responsivas
+.posts-table {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-collapse: collapse;
+}
+
+.post-header-row,
+.post-row {
+  display: contents;
+}
+
+.post-header-cell,
+.post-date,
+.post-title,
+.post-action {
+  border-bottom: 1px solid $border-color;
+  padding: 8px;
+}
+
+.post-header-cell {
+  font-weight: bold;
+  text-align: center;
+}
+
+.post-date {
+  text-align: left;
+}
+
+.post-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-title a {
+  text-decoration: none;
+  color: $text-color;
+  transition: text-decoration 0.3s ease;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-action {
+  text-align: right;
+}
+
+// Botões
+.green-button {
+  display: inline-flex;
+  background-color: $green;
+  color: #fff;
+  text-align: center;
+  padding: $button-padding;
+  text-decoration: none;
+  border: 1px solid $border-color;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.green-button:hover {
+  background-color: $dark-green;
+}

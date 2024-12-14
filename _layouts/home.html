@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="posts-section border-style">
+    <h2 class="section-title">Blog <span class="arrow-icon">&#8628;</span></h2>
+    <div class="posts-table border-style">
+        <div class="post-header-row">
+            <div class="post-header-cell-1">Data</div>
+            <div class="post-header-cell-1">Título</div>
+        </div>
+        {% for post in site.posts %}
+        <div class="post-row">
+            <div class="post-date">
+                {{ post.date | date: "%Y-%m-%d" }}
+            </div>
+            <div class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </div>
+            <div class="post-action">
+                <a class="green-button" href="{{ post.url | relative_url }}">
+                    Ler <span class="arrow-icon">&rarr;</span>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="posts-section border-style">
+    <h2 class="section-title">Artes Visuais & Design <span class="arrow-icon">&#8628;</span></h2>
+    <div class="posts-table border-style">
+     <div class="post-row">
+         <div class="post-title">
+         <a href="{{ post.url | relative_url }}">Arquivo</a>
+         </div>
+
+         <div class="post-action">
+         <a class="green-button" href="{{ post.url | relative_url }}">
+             Ver <span class="arrow-icon">&#8594;</span>
+         </a>
+        </div>
+     </div>
+    </div>
+</div>
