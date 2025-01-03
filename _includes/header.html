@@ -1,10 +1,20 @@
-<header class="header border-style-2">
-    <div class="header-row">
-        <h1 class="site-name"><a  class="link-home" href="{{ '/' | relative_url }}">[BareCore]</a></h1>
-        <div class="button-wrapper">
-         <a class="yellow-button" href="{{ '/' | relative_url }}">Início<span>&uarr;</span></a>
-         <a class="blue-button" href="https://www.github.com/barecore" target="_blank">Github<span>&rarr;</span></a>
-         <a class="blue-button" href="{{ '/' | relative_url }}">Twitter<span>&rarr;</span></a>
+<header class="header">
+    <div class="navbar">
+        <div class="flex-item home-button">
+            <a  class="nav-button" href="{{ '/' | relative_url }}">BareCore*</a>
         </div>
+
+        <div class="flex-item about-button">
+            <a class="nav-button" href="{{ '/' | relative_url }}">About</a>
+        </div>
+
+        <div class="flex-item gallery-button">
+            <a class="nav-button" href="{{ '/' | relative_url }}">Gallery</a>
+        </div>
+        
+        <div class="flex-item git-button">
+            <a class="nav-button" href="https://www.github.com/barecore" target="_blank">Github</a>
+        </div>
+   
     </div>
 </header>
